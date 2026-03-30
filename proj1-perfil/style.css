@@ -1,6 +1,10 @@
 body > * {
   border: 5px solid black;
 }
+main aside .thumb img {
+      width: 100%;
+      padding: 1em;
+    }
 
 main {
   display: grid;

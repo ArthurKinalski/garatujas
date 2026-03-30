@@ -4,37 +4,41 @@
 <head>
   <title>Perfil</title>
   <style>
+
     main {
-      border: 4px solid red;
+      border: 5px dashed black;
+      padding: 1em;
+      display: grid;
+      grid-template-columns: 350px 1fr;
     }
 
     main aside {
-      border: 4px solid blue;
-      width: 350px;
-      display: inline-block;
-      vertical-align: top;
+      border: 5px dashed red;
+      padding: 1em;
     }
 
-    main aside .thumb img{
-        width: 100%;
-        display: inline-block;
-    }
-
-    main aside .thumb {
-      border: 4px solid green;
-    }
-
-    main aside section {
-      border: 4px solid orange;
+    main aside .thumb img {
       width: 100%;
-      box-sizing: border-box;
     }
 
-     main section {
-      border: 4px solid purple;
-      width: 600px;
-      display: inline-block;
+    main > section {
+      border: 5px dashed purple;
+      padding: 1em;
     }
+
+    .galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 5px;
+}
+
+.galeria img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  display: grid;
+  border-radius: 20px;
+}
   </style>
 </head>
 
@@ -43,7 +47,7 @@
   <main>
     <aside>
       <div class="thumb">
-        <img src="image.png" alt="Chuck Norris in a confident pose against a plain background, embodying strength and authority">
+        <img src="image.png" alt="Chuck Norris">
       </div>
       <section>
         <h2>Dados</h2>
@@ -67,7 +71,6 @@
       </p>
 
       <h2>Galeria</h2>
-
       <div class="galeria">
         <img src="https://picsum.photos/200/300?1" alt="des" tilte="título">
         <img src="https://picsum.photos/200/300?2" alt="des" tilte="título">
@@ -87,11 +90,6 @@
         <img src="https://picsum.photos/200/300?16" alt="des" tilte="título">
         <img src="https://picsum.photos/200/300?17" alt="des" tilte="título">
         <img src="https://picsum.photos/200/300?18" alt="des" tilte="título">
-        <img src="https://picsum.photos/200/300?19" alt="des" tilte="título">
-        <img src="https://picsum.photos/200/300?20" alt="des" tilte="título">
-        <img src="https://picsum.photos/200/300?21" alt="des" tilte="título">
-      </div>
-    </section>
   </main>
 
 </body>
