@@ -3,15 +3,44 @@
     <head>
         <title>Formulário</title>
         <style>
+            body {
+                margin: 0;
+                font-family: Arial, sans-serif;
+                display: flex;
+                flex-direction: column;
+                height: 100vh;
+        }
+
             main {
-                font-family: "Courier New", monospace;
-            }
+                display: flex;
+                flex: 1;
+        }
+            .esquerda {
+                width: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+        }
+            .direita {
+                width: 50%;
+                background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url('https://picsum.photos/800/800');
+                background-size: cover;
+                background-position: center;
+
+        }
+            form {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+        }
+
             header {
                 text-align: center;
-                background-color: aqua;
-                border-radius: 50px;
-                font: Arial;
-            }
+                padding: 1px;
+                background: #222;
+                color: white;
+        }
+
         </style>
     </head>
     <body>
@@ -19,36 +48,33 @@
             <h1>Qual é o seu personagem favorito?</h1>
         </header>
 
-    <main>
-        <form method="get">
-            <h3>Quem é você?</h3>
-            <div>
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome">
+        <main>
+            <div class="esquerda">
+                <form method="get">
+                    <h3>Quem é você?</h3>
+
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome">
+
+                    <label for="sobrenome">Sobrenome:</label>
+                    <input type="text" id="sobrenome" name="sobrenome">
+
+                    <h2>Qual seu personagem favorito?</h2>
+
+                    <label><input type="radio" name="personagem" value="arthur"> Arthur Morgan</label>
+                    <label><input type="radio" name="personagem" value="leon"> Leon S. Kennedy</label>
+                    <label><input type="radio" name="personagem" value="joel"> Joel Miller</label>
+                    <label><input type="radio" name="personagem" value="kratos"> Kratos</label>
+
+                    <input type="submit" value="Enviar">
+                </form>
             </div>
-            <div>
-                <label for="sobrenome">Sobrenome:</label>
-                <input type="text" id="sobrenome" name="sobrenome">
-            </div>
 
-                <h2>Qual seu personagem favorito?</h2>
+            <div class="direita"></div>
 
-                <input type="radio" id="arthur" value="arthur" name="personagem">
-                <label for="arthur">Arthur Morgan</label>
-
-                <input type="radio" id="leon" value="leon" name="personagem">
-                <label for="leon">Leon S. Kennedy</label>
-
-                <input type="radio" id="joel" value="joel" name="personagem">
-                <label for="joel">Joel Miller</label>
-
-                <input type="radio" id="kratos" value="kratos" name="personagem">
-                <label for="kratos">Kratos</label>
-
-            <div>
-                <input type="submit" value="Enviar">
-            </div>
-        </form>
-    </main>
+        </main>
+        <footer>
+            <p>&copy; 3000a.c Formulário. Todos os direitos reservados ao Jacinto Pinto.</p>
+        </footer>
     </body>
 </html>
