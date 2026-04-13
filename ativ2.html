@@ -32,6 +32,7 @@
                 display: flex;
                 flex-direction: column;
                 gap: 10px;
+                width: 450px;
         }
 
             header {
@@ -39,6 +40,36 @@
                 padding: 1px;
                 background: #222;
                 color: white;
+                margin: 0;
+        }
+            footer {
+                text-align: center;
+                padding: 1px;
+                background: #222;
+                color: white;
+                margin: 0;
+        }
+            input[type="text"] {
+                padding: 8px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+        }
+
+            input[type="submit"] {
+                padding: 10px;
+                background: #fd9d5d;
+                color: white;
+                border: none;
+                cursor: pointer;
+        }
+            label {
+                margin-bottom: 5px;
+        }
+            input[type="radio"] {
+                margin-right: 5px;
+        }
+            input[type="submit"]:hover {
+                background: #d3702e;
         }
 
         </style>
@@ -51,7 +82,7 @@
         <main>
             <div class="esquerda">
                 <form method="get">
-                    <h3>Quem é você?</h3>
+                    <h2>Quem é você?</h2>
 
                     <label for="nome">Nome:</label>
                     <input type="text" id="nome" name="nome">
