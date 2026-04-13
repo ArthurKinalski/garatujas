@@ -4,9 +4,11 @@
         <title>Formulário</title>
     </head>
     <body>
+        <header>
+            <h1>Qual é o seu personagem favorito?</h1>
+        </header>
 
-        <h1>Qual seu personagem favorito?</h1>
-
+    <main>
         <form method="get">
             <h3>Quem é você?</h3>
             <div>
@@ -18,16 +20,24 @@
                 <input type="text" id="sobrenome" name="sobrenome">
             </div>
 
-            <h2>Qual seu personagem favorito?</h2>
+                <h2>Qual seu personagem favorito?</h2>
 
-            <input type="radio" name="Arthur Morgan">Arthur Morgan
-            <input type="radio" name="Leon S. Kennedy">Leon S. Kennedy
-            <input type="radio" name="Joel Miller">Joel Miller
-            <input type="radio" name="Kratos">Kratos
+                <input type="radio" id="arthur" value="arthur" name="personagem">
+                <label for="arthur">Arthur Morgan</label>
+
+                <input type="radio" id="leon" value="leon" name="personagem">
+                <label for="leon">Leon S. Kennedy</label>
+
+                <input type="radio" id="joel" value="joel" name="personagem">
+                <label for="joel">Joel Miller</label>
+
+                <input type="radio" id="kratos" value="kratos" name="personagem">
+                <label for="kratos">Kratos</label>
 
             <div>
                 <input type="submit" value="Enviar">
             </div>
         </form>
+    </main>
     </body>
 </html>
