@@ -14,12 +14,15 @@
             main {
                 display: flex;
                 flex: 1;
+                background: #333;
+                color: white;
         }
             .esquerda {
                 width: 50%;
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                padding: 20px;
         }
             .direita {
                 width: 50%;
@@ -33,26 +36,46 @@
                 flex-direction: column;
                 gap: 10px;
                 width: 450px;
+                padding: 20px;
+                background: #2a2a2a;
+                border-radius: 12px;
+                box-shadow: 0 0 20px rgba(0,0,0,0.5);
+                border: 1px solid #3a3a3a;
+        }
+            * {
+                box-sizing: border-box;
         }
 
             header {
                 text-align: center;
-                padding: 1px;
+                padding: 8px;
                 background: #222;
                 color: white;
                 margin: 0;
+        }
+            strong {
+                color: #fd9d5d;
+                font-family: "Courier New", monospace;
+                letter-spacing: 2px;
+                text-shadow: 0 0 5px rgba(253, 157, 93, 0.5);
         }
             footer {
                 text-align: center;
-                padding: 1px;
+                padding: 8px;
                 background: #222;
                 color: white;
                 margin: 0;
         }
+            footer p {
+                margin: 0;
+        }
             input[type="text"] {
-                padding: 8px;
-                border: 1px solid #ccc;
-                border-radius: 4px;
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #444;
+                border-radius: 10px;
+                background: #1f1f1f;
+                color: white;
         }
 
             input[type="submit"] {
@@ -61,9 +84,18 @@
                 color: white;
                 border: none;
                 cursor: pointer;
+                border-radius: 8px;
+                transition: 0.2s;
+        }
+            input[type="submit"]:active {
+                transform: scale(0.98);
         }
             label {
                 margin-bottom: 5px;
+        }
+            label:hover {
+                color: #fd9d5d;
+                cursor: pointer;
         }
             input[type="radio"] {
                 margin-right: 5px;
@@ -71,12 +103,21 @@
             input[type="submit"]:hover {
                 background: #d3702e;
         }
+            h1 {
+                font-size: 30px;
+                margin: 10px 0;
+        }
+
+            h2 {
+                font-size: 24px;
+                margin-top: 15px;
+        }
 
         </style>
     </head>
     <body>
         <header>
-            <h1>Qual é o seu personagem favorito?</h1>
+            <h1>Qual é o seu <strong>PERSONAGEM FAVORITO</strong>?</h1>
         </header>
 
         <main>
