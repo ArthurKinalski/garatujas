@@ -8,7 +8,9 @@
                 font-family: Arial, sans-serif;
                 display: flex;
                 flex-direction: column;
+                min-height: 100vh;
                 height: 100vh;
+                overflow: hidden;
         }
 
             main {
@@ -16,25 +18,35 @@
                 flex: 1;
                 background: #333;
                 color: white;
+                min-height: 0;
+                overflow: hidden;
+                
         }
             .esquerda {
                 width: 50%;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                padding: 20px;
+                padding: 10px;
+                height: 100%;
+                background-image: url("image-steam.png");
+                background-size: cover;
         }
             .direita {
                 width: 50%;
                 display: grid;
                 grid-template-columns: 1fr 1fr;
                 gap: 10px;
-                padding: 20px;
+                padding: 10px;
                 background: #111;
+                height: 100%;
         }
             .direita img {
                 width: 100%;
                 border-radius: 10px;
+                opacity: 0.5;
+                transition: 0.2s;
+                
         }
             .direita img:hover {
                 transform: scale(1.05);
@@ -45,12 +57,14 @@
                 display: flex;
                 flex-direction: column;
                 gap: 10px;
-                width: 450px;
-                padding: 20px;
+                width: 400px;
+                padding: 15px;
                 background: #2a2a2a;
                 border-radius: 12px;
                 box-shadow: 0 0 20px rgba(0,0,0,0.5);
                 border: 1px solid #3a3a3a;
+                max-height: 100%;
+                overflow: auto;
         }
             * {
                 box-sizing: border-box;
@@ -59,7 +73,7 @@
             header {
                 text-align: center;
                 padding: 8px;
-                background: #222;
+                background: #222222;
                 color: white;
                 margin: 0;
         }
@@ -109,6 +123,7 @@
         }
             input[type="radio"] {
                 margin-right: 5px;
+                display: none;
         }
             input[type="submit"]:hover {
                 background: #d3702e;
@@ -122,6 +137,57 @@
                 font-size: 24px;
                 margin-top: 15px;
         }
+        
+            .card input {
+                display: none;
+        }
+
+            .card {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                cursor: pointer;
+                display: flex;
+                justify-content: center;
+        }
+
+            .card img {
+                width: 100%;
+                border-radius: 10px;
+                opacity: 0.5;
+                transition: 0.2s;
+                max-height: 400px;
+                object-fit: contain;
+        }
+            .card input:checked + img {
+                opacity: 1;
+                transform: scale(1.05);
+                box-shadow: 0 0 15px #fd9d5d;
+        }
+
+            #arthur:checked ~ .direita #img-arthur {
+                opacity: 1;
+                transform: scale(1.05);
+                box-shadow: 0 0 15px #fd9d5d;
+        }
+
+            #leon:checked ~ .direita #img-leon {
+                opacity: 1;
+                transform: scale(1.05);
+                box-shadow: 0 0 15px #fd9d5d;
+        }
+
+            #joel:checked ~ .direita #img-joel {
+                opacity: 1;
+                transform: scale(1.05);
+                box-shadow: 0 0 15px #fd9d5d;
+        }
+
+            #kratos:checked ~ .direita #img-kratos {
+                opacity: 1;
+                transform: scale(1.05);
+                box-shadow: 0 0 15px #fd9d5d;
+        }
 
         </style>
     </head>
@@ -131,6 +197,12 @@
         </header>
 
         <main>
+
+            <input type="radio" id="arthur" name="personagem">
+            <input type="radio" id="leon" name="personagem">
+            <input type="radio" id="joel" name="personagem">
+            <input type="radio" id="kratos" name="personagem">
+
             <div class="esquerda">
                 <form method="get">
                     <h2>Quem é você?</h2>
@@ -143,25 +215,37 @@
 
                     <h2>Qual seu personagem favorito?</h2>
 
-                    <label><input type="radio" name="personagem" value="arthur"> Arthur Morgan</label>
-                    <label><input type="radio" name="personagem" value="leon"> Leon S. Kennedy</label>
-                    <label><input type="radio" name="personagem" value="joel"> Joel Miller</label>
-                    <label><input type="radio" name="personagem" value="kratos"> Kratos</label>
+                    <label for="arthur">Arthur Morgan</label>
+                    <label for="leon">Leon S. Kennedy</label>
+                    <label for="joel">Joel Miller</label>
+                    <label for="kratos">Kratos</label>
 
                     <input type="submit" value="Enviar">
                 </form>
             </div>
 
             <div class="direita">
-                <img src="image-arthur.png" alt="Arthur Morgan">
-                <img src="image-leon.png" alt="Leon S. Kennedy">
-                <img src="image-joel.png" alt="Joel Miller">
-                <img src="image-kratos.png" alt="Kratos">
+                <label for="arthur" class="card">
+                    <img id="img-arthur" src="image-arthur.png">
+                </label>
+
+                <label for="leon" class="card">
+                    <img id="img-leon" src="image-leon.png">
+                </label>
+
+                <label for="joel" class="card">
+                    <img id="img-joel" src="image-joel.png">
+                </label>
+
+                <label for="kratos" class="card">
+                    <img id="img-kratos" src="image-kratos.png">
+                </label>
+
             </div>
 
         </main>
         <footer>
-            <p>&copy; 3000a.c Formulário. Todos os direitos reservados ao Jacinto Pinto.</p>
+            <p>&copy; 3000a.C. Formulário. Todos os direitos reservados ao Jacinto Pinto.</p>
         </footer>
     </body>
 </html>
